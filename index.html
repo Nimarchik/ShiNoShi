@@ -16,12 +16,12 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <script src="js/main.js" defer></script>
+
 </head>
 
 <body>
   <div class="wrapper">
-    <heade class="header">
+    <header class="header">
       <div class="container">
 
         <nav class="nav">
@@ -44,12 +44,18 @@
             <li class="nav_list-item">
               <a href="#" class="nav_list-link">КОНТАКТИ</a>
             </li>
+            <li class="nav_list-item pos-li">
+
+              <img src="/img/list-img1.svg" alt="Shopping Cart" class="cart-icon" id="cart-icon">
+              <span id="cart-counter" class="cart-counter">0</span>
+
+            </li>
           </ul>
 
         </nav>
 
       </div>
-    </heade>
+    </header>
 
     <main class="main">
       <div class="main_wrapper">
@@ -145,13 +151,13 @@
         <div class="container">
           <h3 class="section-title buy_product-title">Придбайте Photoshop.</h3>
 
-          <ul class="buy_product-list">
-            <li class="buy_product-list-item">
+          <div class="buy_product-list">
+            <div class="buy_product-list-item product-card" data-product-id="1">
               <h4 class="buy_product-list-title">План для фотографів 20 ГБ</h4>
               <p class="buy_product-list-text">Отримайте повні версії програм Photoshop (включно з бета-версією програми
                 «Генеративна заливка»), Lightroom і Lightroom Mobile за найкращою ціною.</p>
               <p class="buy_product-list-price">9,59 US$ /міс.</p>
-              <button class="top_link btn-buy_product">Придбати зараз</button>
+              <button class="top_link btn-buy_product add-to-cart">Придбати зараз</button>
               <p class="buy_product-text">У комплект входить:</p>
               <ul class="buy_product-list-two">
                 <li class="buy_product-list-two-item">Створюйте чудові зображення, яскраву графіку та неймовірні малюнки
@@ -164,14 +170,14 @@
                   500 генеративних кредитів щомісяця</li>
                 <li class="buy_product-list-two-item">Продавайте в Instagram та Facebook</li>
               </ul>
-            </li>
+            </div>
 
-            <li class="buy_product-list-item">
+            <div class="buy_product-list-item product-card" data-product-id="2">
               <h4 class="buy_product-list-title">Creative Cloud – усі програми</h4>
               <p class="buy_product-list-text">Повна версія Photoshop, план Adobe Express Premium і понад 20 програм.
               </p>
               <p class="buy_product-list-price">35,99 US$ /міс</p>
-              <button class="top_link btn-buy_product">Придбати зараз</button>
+              <button class="top_link btn-buy_product add-to-cart">Придбати зараз</button>
               <p class="buy_product-text">У комплект входить:</p>
               <ul class="buy_product-list-two">
                 <li class="buy_product-list-two-item">Створюйте чудові зображення, яскраву графіку та неймовірні малюнки
@@ -184,42 +190,53 @@
                 <li class="buy_product-list-two-item">
                   1 000 генеративних кредитів щомісяця</li>
               </ul>
+            </div>
+
+          <div class="modal" id="cart-modal" style="display: none;">
+            <span class="close" id="close-modal">&times;</span>
+            <div class="cart" style="display: block;">
+              <h2>Кошик</h2>
+              <ul id="cart-items" class="cart_list-break"></ul>
+            </div>
+          </div>
+
+
+        </div>
+  </div>
+  </section>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <header class="header_footer">
+        <nav class="nav_footer">
+          <ul class="nav_footer-list">
+            <li class="nav_footer-item">
+              <a href="#" class="nav_footer-link"><img src="img/in.svg" alt="" class="nav_footer-img"></a>
+            </li>
+            <li class="nav_footer-item">
+              <a href="#" class="nav_footer-link"><img src="img/instagram.svg" alt="" class="nav_footer-img"></a>
+            </li>
+            <li class="nav_footer-item">
+              <a href="#" class="nav_footer-link"><img src="img/twitter.svg" alt="" class="nav_footer-img"></a>
+            </li>
+            <li class="nav_footer-item">
+              <a href="#" class="nav_footer-link"><img src="img/facebook.svg" alt="" class="nav_footer-img"></a>
             </li>
           </ul>
-        </div>
-      </section>
-    </main>
-
-
-    <footer class="footer">
-      <div class="container">
-        <header class="header_footer">
-          <nav class="nav_footer">
-            <ul class="nav_footer-list">
-              <li class="nav_footer-item">
-                <a href="#" class="nav_footer-link"><img src="img/in.svg" alt="" class="nav_footer-img"></a>
-              </li>
-              <li class="nav_footer-item">
-                <a href="#" class="nav_footer-link"><img src="img/instagram.svg" alt="" class="nav_footer-img"></a>
-              </li>
-              <li class="nav_footer-item">
-                <a href="#" class="nav_footer-link"><img src="img/twitter.svg" alt="" class="nav_footer-img"></a>
-              </li>
-              <li class="nav_footer-item">
-                <a href="#" class="nav_footer-link"><img src="img/facebook.svg" alt="" class="nav_footer-img"></a>
-              </li>
-            </ul>
-            <div class="footer_group">
-              <a href="#" class="group_link"><img src="img/icon/favicon.ico" alt="" class="logo_footer"></a>
-              <p class="text_footer">Повідомлення про конфіденційність <br>
-                Умови надання послуг<br>
-                Ліцензії</p>
-            </div>
-          </nav>
-        </header>
-      </div>
-    </footer>
+          <div class="footer_group">
+            <a href="#" class="group_link"><img src="img/icon/favicon.ico" alt="" class="logo_footer"></a>
+            <p class="text_footer">Повідомлення про конфіденційність <br>
+              Умови надання послуг<br>
+              Ліцензії</p>
+          </div>
+        </nav>
+      </header>
+    </div>
+  </footer>
   </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
