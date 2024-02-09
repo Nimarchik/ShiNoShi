@@ -416,7 +416,9 @@ p {
 }
 
 /* ... (existing styles) */
-
+.group_nav{
+  position: relative;
+}
 .cart-icon {
   max-width: 30px;
   cursor: pointer;
@@ -433,7 +435,7 @@ p {
 }
 .cart-counter{
   position: absolute;
-  top: 50%; 
+  top: 30%; 
   left: 60%;
   display: flex;
   align-items: center;
