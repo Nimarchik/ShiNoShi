@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Add new item to the cart
                 const cartItem = document.createElement("li");
                 cartItem.dataset.productId = productId;
-                cartItem.innerHTML = `${productName} -  ${productPrice}   <span class="quantity">1 шт.</span> <button class="decrease">-</button> <button class="remove top_link">REMOVE</button>  `;
+                cartItem.innerHTML = `${productName} -  ${productPrice}   <span class="quantity">1 шт.</span> <button class="decrease">-</button> <button class="remove top_link">Прибрати</button>  `;
                 cartItemsList.appendChild(cartItem);
 
                 // Add event listener for decrease button
