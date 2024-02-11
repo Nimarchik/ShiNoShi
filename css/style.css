@@ -25,8 +25,12 @@ html {
   font-style: normal;
   height: 100%;
   line-height: 1.3;
-}
 
+}
+body{
+  overflow-x: hidden;
+
+}
 p {
   font-family: var(--font-text);
   font-style: normal;
@@ -36,6 +40,7 @@ p {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+
 }
 
 .header {
@@ -741,5 +746,19 @@ p {
   .desc_list-group,
   .desc_list-group-revers {
     width: 300px;
+  }
+
+  .desc_list-text {
+    width: 300px;
+    text-align: left;
+  }
+
+  .desc_list-item {
+    width: 100%;
+  }
+
+  .product-card {
+    width: 300px;
+    margin: 0 auto;
   }
 }
