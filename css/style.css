@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lunasima&display=swap');
 @import url('normalize.css');
 @import url('about.css');
-
+@import url('contacts.css');
 :root {
   --font: 'Russo One', sans-serif;
   --font-text: 'Lunasima', sans-serif;
@@ -64,6 +64,10 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+.active{
+  color: #5F4AF0;
 }
 
 .nav_list-item {
@@ -157,7 +161,7 @@ p {
   margin-bottom: 50px;
 }
 
-.top_link {
+.top_link, .btn_form {
   display: block;
   width: 262px;
   background-color: #C9FF36;
@@ -167,7 +171,8 @@ p {
   transition: all .4s;
 }
 
-.top_link:hover {
+.top_link:hover,
+.btn_form:hover {
   transform: scale(1.05);
   background-color: #5F4AF0;
   color: #fff;
