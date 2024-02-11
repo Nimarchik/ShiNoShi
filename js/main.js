@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
-            
+
         });
     });
 
@@ -98,7 +98,15 @@ document.addEventListener("DOMContentLoaded", function () {
 const accord = document.getElementsByClassName('contentBx');
 
 for (i = 0; i < accord.length; i++) {
-    accord[i].addEventListener('click', function(){
+    accord[i].addEventListener('click', function () {
         this.classList.toggle('active');
     })
 };
+
+
+const burgerBtn = document.querySelector('.burger');
+const listContent = document.querySelector('.nav_list-div');
+
+burgerBtn.addEventListener('click', () => {
+    listContent.classList.toggle('--active')
+})
