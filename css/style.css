@@ -4,6 +4,7 @@
 @import url('normalize.css');
 @import url('about.css');
 @import url('contacts.css');
+@import url('privacy.css');
 
 :root {
   --font: 'Russo One', sans-serif;
