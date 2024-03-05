@@ -5,16 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartCounter = document.getElementById("cart-counter");
     let itemCount = 0;
 
-    // Add event listener for remove button
     const removeFromCart = function () {
-        itemCount = Math.max(0, itemCount - 1); // Не даем счетчику уйти в отрицательные значения
+        itemCount = Math.max(0, itemCount - 1); 
         cartCounter.textContent = itemCount;
     };
 
     const addToCart = function () {
         itemCount++;
         cartCounter.textContent = itemCount;
-
     };
 
     addToCartButtons.forEach(button => {
@@ -27,22 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
             const productPrice = productCard.querySelector('.buy_product-list-price').innerHTML;
 
 
-            // Check if the item is already in the cart
             const existingCartItem = document.querySelector(`li[data-product-id="${productId}"]`);
 
 
             if (existingCartItem) {
-                // Increment quantity if already in the cart
                 const quantityElement = existingCartItem.querySelector(".quantity");
                 quantityElement.innerText = parseInt(quantityElement.innerText) + 1;
             } else {
-                // Add new item to the cart
                 const cartItem = document.createElement("li");
                 cartItem.dataset.productId = productId;
                 cartItem.innerHTML = `${productName} -  ${productPrice}   <span class="quantity">1 шт.</span> <button class="decrease">-</button> <button class="remove top_link">Прибрати</button>  `;
                 cartItemsList.appendChild(cartItem);
 
-                // Add event listener for decrease button
                 const decreaseButton = cartItem.querySelector(".decrease");
                 decreaseButton.addEventListener("click", function () {
                     const quantityElement = cartItem.querySelector(".quantity");
@@ -51,17 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (quantity > 1) {
                         quantityElement.innerText = quantity - 1;
                     } else {
-                        // Remove item from the cart if quantity is 1
                         cartItemsList.removeChild(cartItem);
                     }
 
 
                 });
-                // Добавляем обработчики для удаления из корзины
                 const removeButtons = document.querySelectorAll(".remove");
                 removeButtons.forEach(button => {
                     button.addEventListener("click", function () {
-                        removeFromCart(); // Уменьшаем счетчик при удалении из корзины
+                        removeFromCart(); 
 
                         const cartItem = button.closest("li");
                         cartItemsList.removeChild(cartItem);
